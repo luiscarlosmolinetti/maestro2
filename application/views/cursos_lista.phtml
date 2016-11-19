@@ -1,0 +1,40 @@
+
+<section>     
+       <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>     
+               <td>id</td>
+               <td>descrição </td> 
+               <td>carga horaria</td>       
+               <td>conteudo</td> 
+               <td>data inicio</td>
+               <td>data fim</td>       
+               <td>lotacao</td>                      
+               <td>professor</td>
+               <td>titulo</td>        
+            </tr>          
+
+              
+       <?php foreach ($view_cursos as $cursos) { ?>
+         
+           <tr>
+              <td> <?php   echo $cursos['id']; ?>  </td>
+              <td> <?php   echo $cursos['descricao']; ?>  </td>              
+              <td> <?php   echo $cursos['cargahoraria']; ?>  </td>  
+              <td> <?php   echo $cursos['conteudo']; ?>  </td>
+              <td> <?php   echo $cursos['datainicio']; ?>  </td>
+              <td> <?php   echo $cursos['datafim']; ?>  </td>              
+              <td> <?php   echo $cursos['conteudo']; ?>  </td>  
+              <td> <?php   echo $cursos['professor']; ?>  </td>
+              <td> <?php   echo $cursos['titulo']; ?>  </td>    
+              <td>  <a href="funcionario_form.php?id=<?php echo $funcionario ['id'];?>">  </a> </td>
+                        
+           </tr>                    
+             
+     
+          	
+        <?php } ?> 
+       
+       
+      
+    </table>
+</section>

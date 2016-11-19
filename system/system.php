@@ -31,7 +31,9 @@
  	  function run() {
  	  	require('application/controllers/'.$this->controller.'.php');
  	  	
- 	  	$app = new $this->controller();
+ 	  	$control = '\\application\\controllers\\'.$this->controller;
+ 	  	$app = new $control();
+ 	  	
  	  	$action =$this->action;
  	  	$app ->$action();
  	  }

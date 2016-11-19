@@ -1,16 +1,14 @@
 <?php
-class dashboard extends controler{
-	public 
-	  function index(){
 
+namespace application\controllers;
+
+class dashboard extends \controler{
+	public 
+	  function index(){	  	
 	  	
-	  	$dashboard = new dashboardmodel();
+	  	$dashboard = new \application\models\dashboardmodel();
 	  	$dashboard_lista = $dashboard -> select();
 	  	$data['dashboard'] = $dashboard_lista;
-	    $this->loadview('index',$data);
-	    
-	    
+	    $this->loadview('index',$data);	    
 	  }
-			
-	
 }
